@@ -75,14 +75,20 @@ class WhatsYourName extends React.Component {
   // Hint: use `console.log` to check `event.target`. You will find text
   //       entered to the input there.
   onNameChange(event) {
-    // Huh... There's something wrong here...
-    this.setState({bad_attribute: "ChangeME!"});
+    console.log(event.target.value)
+    this.setState({name: event.target.value});
   }
 
   render() {
+    var nameToDisplay;
+    if (this.state.name.length == 0) {
+      nameToDisplay = "Hey there. Enter your name.";
+    } else {
+      nameToDisplay = "Hello " + this.state.name;
+    }
     return (
       React.createElement("div", null, 
-        React.createElement("p", null, "Hello ", this.state.name), 
+        React.createElement("p", null, nameToDisplay), 
         React.createElement("input", {type: "text", name: "username", onChange: this.onNameChange})
       )
     );

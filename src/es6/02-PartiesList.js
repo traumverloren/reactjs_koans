@@ -11,8 +11,10 @@ class PartiesList extends React.Component {
   // Doesn't this list look familiar to you?
   render() {
     return (
-      React.createElement("ul", {className: "FILL ME"}, 
-        React.createElement("li", null, "Party at Aperture Laboratories")
+      React.createElement("ul", {className: "parties-list"}, 
+        React.createElement("li", null, "Party at Aperture Laboratories"), 
+        React.createElement("li", null, "Party at Your Mom's")
+
       )
     );
   }
