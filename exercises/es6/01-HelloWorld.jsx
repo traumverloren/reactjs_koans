@@ -20,10 +20,10 @@ class HelloWorld extends React.Component {
   //
   // React delivers a big set of standard HTML elements like `div`, `p`,
   // `canvas` etc. Here you can see usage of a `div` element.
-
   render() {
     return (
-        <div>Hello World</div>
+        (<span>Hello World</span>)
+
     );
   }
 }
