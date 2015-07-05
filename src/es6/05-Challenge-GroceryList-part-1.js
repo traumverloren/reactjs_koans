@@ -35,7 +35,7 @@ class GroceryList extends React.Component {
     // Hint: Don't forget about putting items into `ul`
     return (
       React.createElement("div", null, 
-        "// Put your code here"
+        React.createElement("ul", null, groceriesComponents)
       )
     );
   }
@@ -51,7 +51,7 @@ class GroceryListItem extends React.Component {
   render() {
     return (
         React.createElement("li", null, 
-          "// Put your code here."
+          this.props.grocery.name
         )
     );
   }
